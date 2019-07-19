@@ -1,0 +1,21 @@
+<!---structural directives-->
+
+<p *ngIf="!show" ;else elseblock>Here is</p>
+<p elseblock>here is elseblock</p>
+<li *ngFor="let colors of color;index as i">{{colors}}{{i}}</li>
+<!---Attribute  directives-->
+
+
+<!---ngstyle-->
+<button (click)="size = size + 1">+</button>
+<button (click)="size = size - 1">-</button>
+<div [ngStyle]="{'color': colors, 'font-size': size + 'px'}">
+  style using ngStyle
+</div>
+<div [ngStyle]="{'background-color': colors}">
+    style using ngStyle
+  </div>
+<!----ngClass-->
+<div (click)="clickOnRow()" class="selected" [class.selected]=" selectedIndex==1">
+    selected row
+</div>
